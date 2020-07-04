@@ -419,7 +419,7 @@ body {
 	font-weight: 300;
 	font-size: 15px;
 	line-height: 1.5;
-	color: #d0d0d0;
+	color: #a6a6a6;
 	border-right: 1px solid #e5e5e5;
 	border-bottom: 1px solid #e5e5e5;
 	border-left: 1px solid #e5e5e5;
@@ -1155,7 +1155,7 @@ margin: 41px 0 0 0;
 }
 .reviews__title {
 	font-size: 18px;
-    margin: 0px 0 0 40px;
+    margin: 10px 0 0 40px;
 }
 .reviews__title:before {
 	width: 30px;
