@@ -435,7 +435,7 @@ body {
   	padding: 18px;
 }
 
-/* REVIEWS =================================================*/
+/* carusel =================================================*/
 /*carusel*/
 .carusel {
 	margin: 75px 0;
@@ -463,6 +463,8 @@ body {
 }
 .carusel__item {
 	margin: 0 0 0 60px;
+	display: flex;
+    flex-direction: column;
 }
 .carusel__suptext {
 	width: 100%;
@@ -967,6 +969,7 @@ body {
 	width: 100%;
 }
 }
+/*---------------------------*/
 @media (max-width: 767px) {
 .header {
 	background: #e78582;
@@ -1139,44 +1142,53 @@ margin: 41px 0 0 0;
 .wedo__accordeon {
     width: 100%;
 }
-/*REVIEWS ****************************************/
-.reviews {
+/*carusel ****************************************/
+.carusel {
     margin: 13px 0 0 0;
 }
-.reviews_w {
+.carusel_w {
     margin: 0 0 32px 0;
 }
-.reviews__inner {
-	height: 200px;
+.carusel__inner {
+	/*height: 200px;*/
+	padding: 0;
 }
-.reviews__inner:after {
+.carusel__inner:after {
 	left: 5px;
 }
-.reviews__inner:before {
+.carusel__inner:before {
 	right: 5px;
 }
-.reviews__item {
-    margin: 0 35px 0 35px;
+.carusel__item {
+    margin: 35px;
+
 }
-.reviews__title {
+.carusel__title {
 	font-size: 18px;
-    margin: 10px 0 0 40px;
+    margin: 10px 0 0 51px;
 }
-.reviews__title:before {
+.carusel__title:before {
 	width: 30px;
 	left: -40px;
 }
-.reviews__suptext {
+.carusel__suptext {
 	font-size: 12px;
 	height: auto;
+	padding: 0 10px;
 }
-.reviews__icon_g {
-    padding: 10px;
+.carusel__icon_g {
+    padding: 0px;
     border: none;
 }
-.reviews__icon img {
+.carusel__icon img {
 	display: none;
-}	
+}
+.carusel__butn_right {
+    right: 10px;
+}
+.carusel__butn_left {
+    left: 10px;
+}     	
 /*TEAM *******************************************/
 .team__row {
 	margin: 0 0 45px 0;
@@ -1200,14 +1212,21 @@ margin: 41px 0 0 0;
 	margin: 0 0 35px 0;
 }
 /*BLOG *******************************************/
+.blog__content {
+    padding: 8px 0;
+}
 .blog__inner {
 	flex-wrap: wrap;
+	padding: 0 0 30px 0;
 }
 .blog__item {
 	width: 100%;
 }
+.blog__subtext {
+	padding: 8px 0px;	
+	}
 .blog__footer {
-margin: 0 0 23px 0;
+margin: 0 0 30px 0;
 }
 /*LOGOS ******************************************/
 .logos__inner {
