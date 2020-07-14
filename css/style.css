@@ -401,8 +401,9 @@ body {
 	top: 20px;
     right: 22px; 
 	transform: rotate(135deg);
+	transition: 0.3s;
 }
-.accordeon__header.panel-active:after {
+.accordeon__header.active:after {
 	transform: rotate(-45deg);
 }
 .accordeon__icon {
@@ -424,15 +425,9 @@ body {
 	border-right: 1px solid #e5e5e5;
 	border-bottom: 1px solid #e5e5e5;
 	border-left: 1px solid #e5e5e5;
+	padding: 5px;
 	display: none;
 	transition: 1s;
-	top: 0;
-	height: 0;
-}
-.panel-active + .accordeon__content {
-  	display: block;
-  	height: auto;
-  	padding: 18px;
 }
 
 /* carusel =================================================*/
@@ -456,19 +451,21 @@ body {
 }
 .carusel__icon {
 	/*width: 100%;*/
+
 }
 .carusel__icon_g {
-	border: 3px solid #95e1d3;
 	padding: 40px;
+	border: 3px solid #95e1d3;
+	position: absolute;
 }
 .carusel__item {
 	margin: 0 0 0 60px;
+	padding: 0 0 0 130px;
 	display: flex;
     flex-direction: column;
 }
 .carusel__suptext {
 	width: 100%;
-	height: 110px;
 	font-family: 'Roboto', sans-serif;
 	font-style: italic;
 	font-weight: 300;
@@ -1161,7 +1158,7 @@ margin: 41px 0 0 0;
 }
 .carusel__item {
     margin: 35px;
-
+	padding: 0 0 0 0px;
 }
 .carusel__title {
 	font-size: 18px;
