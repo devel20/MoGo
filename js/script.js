@@ -1,4 +1,4 @@
-// burger **************************************************
+// burger JS **************************************************
 document.getElementById("header__burger").onclick = function() {
   open()
 };
@@ -9,14 +9,20 @@ function open() {
   document.getElementById("body").classList.toggle("lock");
 }
 
-// accordeon ***********************************************
+// accordeon jQuery ***********************************************
+$(document).ready(function(){
+$(".accordeon__header").on("click", function(){
+if($(this).hasClass('active')){
+ $(this).removeClass("active");
+$(this).siblings('.accordeon__content').slideUp(400);
+}else{
 
-jQuery(document).ready(function($) {
-  $('.accordeon__header').on('click', function(event) {
-      $(this).toggleClass('active').next().slideToggle(300);
-      $('.accordeon__header').not(this).removeClass('active').next().slideUp(300);
-  });
-
+$(".accordeon__header").removeClass("active");
+$(this).addClass("active");
+$('.accordeon__content').slideUp(400);
+$(this).siblings('.accordeon__content').slideDown(400);
+}
+});
 });
 
 // carusel*************************************************
