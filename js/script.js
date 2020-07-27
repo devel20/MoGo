@@ -25,38 +25,36 @@ $(this).siblings('.accordeon__content').slideDown(400);
 });
 });
 
-// carusel*************************************************
-  window.addEventListener('load', () => {
-  // buttons
-  const left = document.querySelector('.carusel__butn_left')  
-  const right = document.querySelector('.carusel__butn_right')
-
-  // carusel
-  const slider = document.querySelector('.carusel__slider')
-  const sliderItem = document.querySelectorAll('.carusel__inner')
-
-  let counter = 0;
-  let stepSize = sliderItem[0].clientWidth
-    
-  slider.style.transform = 'translateX(' + `${-stepSize * counter}px)`;
-
-  right.addEventListener('click', () => {
-    counter >= sliderItem.length - 1 ? (counter = -1) :null;
-    slider.classList.add('transformAnimation')
-     console.log(counter)
-     console.log('item', sliderItem.length)
-    counter++;
-    slider.style.transform = 'translateX(' + `${-stepSize * counter}px`
-  });
-  left.addEventListener('click', () => {
-    if (counter <= 0) counter = sliderItem.length;
-    slider.classList.add('transformAnimation')
-    console.log(counter)
-    counter--;
-    slider.style.transform = 'translateX(' + `${-stepSize * counter}px`
+// slider_slick *************************************************
+jQuery(document).ready(function($) {
+  $('.slider').slick({
+    arrows:true,
+    dots:false,
+    adaptiveHeight:true,
+    slidesToShow:1,         
+    slidesToScroll:1,    
+    speed:1000,             
+    easing:'ease',  
+    infinite:true,         
+    draggable:true,       
+    swipe: true,      
+    touchMove:true,
+    responsive:[
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow:1
+        }
+      },
+      {
+        breakpoint: 550,
+        settings: {
+          slidesToShow:1
+        }
+      }
+    ]
   });
 });
-
 
 
 
