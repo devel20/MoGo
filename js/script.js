@@ -43,14 +43,16 @@ $(window).scroll(function() {
 });
 
 // accordeon jQuery ***********************************************
+
 $(document).ready(function(){
-  $(".accordeon__header").on("click", function(){
+  $('.accordeon__content:first').slideDown(); // откривает первое меню 
+  $('.accordeon__header').on('click', function(){
     if($(this).hasClass('active')){
-      $(this).removeClass("active");
+      $(this).removeClass('active');
       $(this).siblings('.accordeon__content').slideUp(400);
     }else{
-      $(".accordeon__header").removeClass("active");
-      $(this).addClass("active");
+      $('.accordeon__header').removeClass('active');
+      $(this).addClass('active');
       $('.accordeon__content').slideUp(400);
       $(this).siblings('.accordeon__content').slideDown(400);
       }
