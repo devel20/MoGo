@@ -7,6 +7,7 @@ jQuery(document).ready(function($) {
 let link = $('a[href]');
     $(link).click(function(){
     $('.header__burger, .header__menu').removeClass('active');
+    $('body').removeClass('lock');
   });
 });
 
