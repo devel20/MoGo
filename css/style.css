@@ -1022,7 +1022,7 @@ body {
     right: -100%;
     width: 100%;
     height: 100%;
-    background: #f38181;
+ 	background: rgba(166, 79, 76, 0.8);
     overflow: scroll;
 }
 .header__burger {
