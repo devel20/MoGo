@@ -961,3 +961,369 @@ body {
 }
 
 
+
+
+
+
+
+
+
+/*--------------------------------------------------------*/
+ /* АДАПТИВ */
+@media (max-width: 420px) {
+
+.footer-social__social {
+	font-size: 12px;
+}	
+.footer__form {
+	display: block;
+}
+.footer__input {
+	width: 100%;
+	border-right: 1px solid #e7e7e7;
+	margin: 0 0 20px 0;
+}
+.footer__button {
+	width: 100%;
+}
+}/*} @media 420*/
+
+/* @media 767px-------------------------------------------
+---------------------------------------------------------*/
+@media (max-width: 767px) {
+.scroll-top {
+	width: 40px;
+	height: 40px;
+}	
+.header {
+	background: #e78582;
+	position: fixed; 
+}	
+.header__inner {
+   	margin: 5px 0px;
+}    	
+/*BURGER***********************************************/
+#body.lock {
+	overflow: hidden;
+}
+.header__menu {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+ 	background: rgba(166, 79, 76, 0.8);
+    overflow: scroll;
+}
+.header__burger {
+    display: block;
+    position: relative;
+    z-index: 5;
+    width: 30px;
+    height: 20px;
+    margin: 0 20px 0 0; 
+}
+.header__burger span {
+    background: #fff;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 9px;  
+    transition: 0.3s;
+}
+.header__burger:before,
+.header__burger:after {
+    content: '';
+    background: #fff;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    transition: 0.3s;
+}
+.header__burger:before {
+    top: 0;
+}
+.header__burger:after {
+    bottom: 0;
+}
+.header__burger.active:before {
+    transform: rotate(45deg);
+    top: 9px;
+}
+.header__burger.active:after {
+    transform: rotate(-45deg);
+    bottom: 9px;
+}
+.header__burger.active span{
+    transform: scale(0);
+  }
+.header__menu.active {
+    right: 0;
+}
+  .header__list {
+  display: block;
+  text-align: center;
+}
+.header__list li {
+  margin: 40px 0 0 0;
+}
+.header__link {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0;
+}
+.header__link.active {
+    color: #fff;
+}
+.header__link.active:before {
+	width: 0;
+}/*BURGER*/
+/*SECTION *****************************************/
+.section {
+    padding: 45px 0 0 0;
+}
+.section__header {
+	    margin: 0 0 30px 0;
+}
+.section__title {
+	margin: 20px 0 60px 0;
+}
+.section__title:after {
+	bottom: -30px;
+}
+
+/*INTRO *******************************************/
+.intro__inner {
+	/*margin: 41px 0 0 0;*/
+    padding: 110px 0 0 0;
+}
+.intro__suptitle {
+	font-size: calc(40px + 22 * (100vw / 1200));
+}
+.intro__title {
+	font-size: calc(40px + 45 * (100vw / 1200));
+	margin: 50px 0 50px 0;
+}
+/*count *******************************************/
+.count__item {
+	font-size: 10px;
+}
+.count__num {
+	    font-size: 9px;
+}
+.count__inner {
+margin: 41px 0 0 0;
+}
+/*ABOUT *******************************************/
+.about {
+    margin: 0;
+}
+.about__row {
+	flex-direction: column;
+}
+.about__item {
+	width: 100%;
+	margin: 0 0 60px 0;
+}
+/*STATISTIC ***************************************/
+.statistic__inner {
+	display: block;
+}
+.statistic__item {
+	width: 100%;
+    height: 100%;
+    padding: 20px 20px;
+    text-align: center;
+}
+.statistic__number {}
+/*SERVICES ****************************************/
+.services__inner {
+	padding: 0 0 20px 0;
+}
+.services__item {
+	width: 100%;
+	margin: 0 0 30px 0;
+} 
+.services__title {
+	margin: 0 0 10px 0;
+}
+.services__line {
+	margin: 0 0 30px 0;
+}
+/*WEDO *******************************************/
+.wedo__inner {
+	flex-wrap: wrap;
+	margin: 0 0 35px 0;
+}
+.wedo__img {
+	width: 100%;
+	margin: 0 auto 30px;
+}
+.wedo__accordeon {
+    width: 100%;
+}
+/*revievs ***************************************/
+.rewievs {
+	padding: 0;
+	margin: 20px 0;
+}
+/*slider ****************************************/
+.slider .slick-arrow.slick-next {
+	right: 10px;
+}
+.slider .slick-arrow.slick-prev {
+	left: 10px;
+}
+.slider {
+    margin: 13px 0 0 0;
+}
+.slider_w {
+    margin: 0 0 32px 0;
+}
+.slider__inner {
+	padding: 0;
+}
+.slider__inner:after {
+	left: 5px;
+}
+.slider__inner:before {
+	right: 5px;
+}
+.slider__item {
+    margin: 35px;
+	padding: 0 0 0 0px;
+	min-height: auto;
+}
+.slider__title {
+	font-size: 18px;
+    margin: 10px 0 0 51px;
+}
+.slider__title:before {
+	width: 30px;
+	left: -40px;
+}
+.slider__suptext {
+	font-size: 12px;
+	height: auto;
+	padding: 0 10px;
+}
+.slider__icon_g {
+    padding: 0px;
+    border: none;
+}
+.slider__icon img {
+	display: none;
+}
+    	
+/*TEAM *******************************************/
+.team__row {
+	margin: 0 0 45px 0;
+	flex-direction: column;
+	align-items: center;
+}
+.team__column {
+    width: 75%;
+    text-align: center;
+    margin: 0 0 45px 0;
+}
+.team__item:hover .team__social-net {
+    left: calc(50% - 122px);
+}
+
+/*WORK *******************************************/
+.work__col {
+	width: 100%;
+}
+.work__inner {
+	margin: 0 0 35px 0;
+}
+
+/*BLOG *******************************************/
+.blog__content {
+    padding: 8px 0;
+}
+.blog__inner {
+	flex-wrap: wrap;
+	padding: 0 0 30px 0;
+}
+.blog__item {
+	width: 100%;
+}
+.blog__subtext {
+	padding: 8px 0px;	
+	}
+.blog__footer {
+margin: 0 0 30px 0;
+}
+
+/*LOGOS ******************************************/
+.logos__inner {
+	padding: 15px 10px;
+	justify-content: space-around;
+}
+.logos__item {
+	    margin: 10px 10px;
+}
+
+/*PEOPLE *****************************************/
+.people__inner {
+    padding: 0px;
+}
+.people__item {
+	width: 100%;
+	padding: 110px 0 60px 0;
+}
+.people__img {
+    top: 0;
+    left: 0;
+}
+.people__text {
+    margin: 35px 0 0 0;
+}    
+.people__subtext:after {
+    width: 105px;
+}
+
+/*FOOTER *****************************************/
+.footer__inner {
+	justify-content: center;
+}
+.footer-blogs {
+	width: 100%;
+	margin: 45px 0 0 0;
+}
+.footer-instagram {
+	width: 100%;
+}
+.footer-instagram__title {
+	text-align: center;
+	margin: 0 0 20px 0;
+}
+.footer-instagram__item {
+	margin: 0 auto;
+	
+}
+.footer-instagram__img {}
+.footer-instagram__link {
+	text-align: center;
+}
+} /* @media 767px*/
+
+/* @media 1020px----------------------------------------
+-------------------------------------------------------*/
+@media (max-width: 1020px) {
+
+.logos__inner {
+	max-width: 718px;
+	margin: 0 auto;
+}
+.footer__inner {
+	flex-wrap: wrap-reverse;
+	justify-content: space-around;
+}	
+.footer__col_main {
+	width: 100%;
+}
+}/* @media 1020px*/
