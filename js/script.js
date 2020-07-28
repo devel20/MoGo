@@ -56,6 +56,19 @@ jQuery(document).ready(function($) {
   });
 });
 
+// scroll Top ***************************************************
+jQuery(document).ready(function($) {
+$(window).scroll(function() {
+        if ($(this).scrollTop() > 900) {
+            $('.scroll-top').css({opcity: 1}).fadeIn('slow');
+        } else { $('.scroll-top').stop(true, false).fadeOut('fast'); }
+    });
+    $('.scroll-top').click(function() {
+        $('html, body').stop().animate({scrollTop : 0}, 300);
+    });
+});
+// ******************************************************
+
 
 
 
