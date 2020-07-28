@@ -11,18 +11,17 @@ function open() {
 
 // accordeon jQuery ***********************************************
 $(document).ready(function(){
-$(".accordeon__header").on("click", function(){
-if($(this).hasClass('active')){
- $(this).removeClass("active");
-$(this).siblings('.accordeon__content').slideUp(400);
-}else{
-
-$(".accordeon__header").removeClass("active");
-$(this).addClass("active");
-$('.accordeon__content').slideUp(400);
-$(this).siblings('.accordeon__content').slideDown(400);
-}
-});
+  $(".accordeon__header").on("click", function(){
+    if($(this).hasClass('active')){
+      $(this).removeClass("active");
+      $(this).siblings('.accordeon__content').slideUp(400);
+    }else{
+      $(".accordeon__header").removeClass("active");
+      $(this).addClass("active");
+      $('.accordeon__content').slideUp(400);
+      $(this).siblings('.accordeon__content').slideDown(400);
+      }
+  });
 });
 
 // slider_slick *************************************************
@@ -59,7 +58,7 @@ jQuery(document).ready(function($) {
 // scroll Top ***************************************************
 jQuery(document).ready(function($) {
 $(window).scroll(function() {
-        if ($(this).scrollTop() > 900) {
+        if ($(this).scrollTop() > 400) {
             $('.scroll-top').css({opcity: 1}).fadeIn('slow');
         } else { $('.scroll-top').stop(true, false).fadeOut('fast'); }
     });
