@@ -1,13 +1,26 @@
-// burger JS **************************************************
-document.getElementById("header__burger").onclick = function() {
-  open()
-};
+// burger JQ **************************************************
+jQuery(document).ready(function($) {
+  $('.header__burger').click(function() {
+  $('.header__burger, .header__menu').toggleClass('active');
+  $('body').toggleClass('lock');
+  });
+let link = $('a[href]');
+    $(link).click(function(){
+    $('.header__burger, .header__menu').removeClass('active');
+  });
+});
 
-function open() {
-  document.getElementById("header__burger").classList.toggle("active");
-  document.getElementById("header__menu").classList.toggle("active");
-  document.getElementById("body").classList.toggle("lock");
-}
+// scroll Top ***************************************************
+jQuery(document).ready(function($) {
+$(window).scroll(function() {
+        if ($(this).scrollTop() > 400) {
+            $('.scroll-top').css({opcity: 1}).fadeIn('slow');
+        } else { $('.scroll-top').stop(true, false).fadeOut('fast'); }
+    });
+    $('.scroll-top').click(function() {
+        $('html, body').stop().animate({scrollTop : 0}, 300);
+    });
+});
 
 // accordeon jQuery ***********************************************
 $(document).ready(function(){
@@ -55,19 +68,8 @@ jQuery(document).ready(function($) {
   });
 });
 
-// scroll Top ***************************************************
-jQuery(document).ready(function($) {
-$(window).scroll(function() {
-        if ($(this).scrollTop() > 400) {
-            $('.scroll-top').css({opcity: 1}).fadeIn('slow');
-        } else { $('.scroll-top').stop(true, false).fadeOut('fast'); }
-    });
-    $('.scroll-top').click(function() {
-        $('html, body').stop().animate({scrollTop : 0}, 300);
-    });
-});
-// ******************************************************
 
+// ******************************************************
 
 
 
